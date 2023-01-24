@@ -1,0 +1,123 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <script>
+    const logout = () => {window.location.href="http://localhost:3000/logout"};
+    const move1 = () => {window.location.href="http://localhost:3000/reserve"};
+    const move2 = () => {window.location.href="http://localhost:3000/reserveinfo"};
+  </script>
+</head>
+<div class="header">
+  <div class="header-logo">
+    <div class="logo"><img
+        src="./img/car.png"
+        alt="Car Dealer"
+      /></div>
+    <span class="logo-text">Car Dealer</span>
+  </div>
+
+  <div class="header-info">
+    <span class="header-info_title">Car Dealer WEB에 방문해주셔서 감사합니다!</span>
+  </div>
+</div>
+
+<div class="content">
+  <div class="side">
+    <div class="side-frame">
+      <div class="side-frame_id">
+        <div class="userinfo">{{user}}님</div>
+        <button class="logout" onclick="logout()">Logout</button>
+      </div>
+    </div>
+    <div class="side-menu">
+      <div class="side-menu_list">
+        <span class="side-menu_list_colored">FOR 구매자</span>
+        <span class="material-symbols-outlined">expand_more</span>
+      </div>
+      <div class="side-menu_list" onclick="move1()">
+        <span>차량 구매 예약</span>
+      </div>
+      <div class="side-menu_list" onclick="move2()">
+        <span>차량 예약 내역 조회</span>
+      </div>
+      <div class="side-menu_list">
+        <span class="side-menu_list_colored">FOR 관리자</span>
+        <span class="material-symbols-outlined">expand_more</span>
+      </div>
+      <div class="side-menu_list">
+        <span>차량 등록</span>
+      </div>
+      <div class="side-menu_list" >
+        <span>차량 정보 수정</span>
+      </div>
+      <div class="side-menu_list" >
+        <span>차량 정보 삭제</span>
+      </div>
+      <div class="side-menu_list">
+        <span>차량 예약 정보 수정</span>
+      </div>
+      <div class="side-menu_list">
+        <span>예약 차량 판매 여부</span>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <span class="main-top_title">Car Dealer 인기 차량 TOP 10</span>
+    <div class="main-top_table">
+      <table>
+        <tr>
+          <td class="main-top_table_first_head"><img
+            src="./img/sonata.png"
+            alt="sonata"/></td>
+          <td class="main-top_table_second_head"><img
+            src="./img/k9.png"
+            alt="k9"/></td>
+          <td class="main-top_table_third_head"><img
+            src="./img/e-class.png"
+            alt="e-class"/></td>
+          <td class="main-top_table_fourth_head"><img
+            src="./img/tivoli.png"
+            alt="tivoli"/></td>
+          <td class="main-top_table_fifth_head"><img
+            src="./img/i7.png"
+            alt="i7"/></td>
+        </tr>
+        <tr>
+          <td class="main-top_table_first_body">HYUNDAI SONATA</td>
+          <td class="main-top_table_second_body">KIA K9</td>
+          <td class="main-top_table_third_body">BENZ E-CLASS</td>
+          <td class="main-top_table_fourth_body">SSANGYONG TIVOLI</td>
+          <td class="main-top_table_fifth_body">BMW I7</td>
+        </tr>
+        <tr>
+          <td class="main-top_table_sixth_head"><img
+            src="./img/spark.png"
+            alt="spark"/></td>
+          <td class="main-top_table_seventh_head"><img
+            src="./img/sportage.png"
+            alt="sportage"/></td>
+          <td class="main-top_table_eighth_head"><img
+            src="./img/xc40.png"
+            alt="xc40"/></td>
+          <td class="main-top_table_ninth_head"><img
+            src="./img/model s.png"
+            alt="model s"/></td>
+          <td class="main-top_table_tenth_head"><img
+            src="./img/casper.png"
+            alt="casper"/></td>
+        </tr>
+        <tr>
+          <td class="main-top_table_sixth_body">CHEVROLET SPARK</td>
+          <td class="main-top_table_seventh_body">KIA SPORTAGE</td>
+          <td class="main-top_table_eighth_body">VOLVO XC40</td>
+          <td class="main-top_table_ninth_body">TESLA MODEL S</td>
+          <td class="main-top_table_tenth_body">HYUNDAI CASPER</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

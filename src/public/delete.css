@@ -1,0 +1,386 @@
+body {
+  height: 100vh;
+  display: flex;
+  padding: 0px;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+.header {
+  display: flex; 
+  margin-top: 16px;
+  margin-left: 16px;
+  flex-direction: row;
+  margin-bottom: 16px;
+  align-items: end;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-info {
+  margin-left: 200px;
+  margin-bottom: 35px;
+  height: 44px;
+  padding: 2px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.header-info_title {
+  font-size: 22px;
+}
+
+
+.logo img {
+  max-width: 112px;
+}
+
+.logo-text {
+  font-size: 24px;
+  color: #d1642a;
+  margin-left: 4px;
+  margin-bottom: 5px;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  border-right: #e5e5e5 solid 1px;
+}
+
+.side-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.side-frame_id {
+  display: flex;
+  width: 234px;
+  height: 60px;
+  padding: 8px;
+  flex-direction: row;
+  background-color: #f5f5f5;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userinfo {
+  margin-left: 16px;
+}
+
+.logout {
+  height: 52px;
+}
+
+.side-menu_list {
+  margin-top: 8px;
+  border-bottom: #e5e5e5 solid 1px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.side-menu_list:hover {
+  background-color: #d1642a;
+  color: white;
+}
+
+.side-menu_list_colored {
+  background-color: #ebcbb9;
+}
+
+.main {
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main-top_table,
+.main-second_table,
+.main-third_table,
+.main-fourth_table {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.main-top_title {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.main-top .material-symbols-outlined {
+  margin-top : 12px;
+}
+
+table {
+  display: table;
+  width: 100%;
+}
+tr,
+td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: #e7cdae solid 1px !important;
+  height: 30px;
+}
+
+.main-top_table_second_head,
+.main-top_table_third_head,
+.main-top_table_fifth_head,
+.main-second_table_second_head,
+.main-second_table_third_head,
+.main-second_table_fifth_head,
+.main-fourth_table_second_head,
+.main-fourth_table_third_head,
+.main-fourth_table_fifth_head{
+  width : 11%;
+  color : white;
+  display: flex;
+  font-size: 14px;
+}
+
+.main-top_table_first_head,
+.main-second_table_first_head,
+.main-fourth_table_first_head{
+  width : 17%;
+  color : white;
+  display: flex;
+  font-size: 14px;
+}
+
+.main-top_table_fourth_head,
+.main-top_table_eighth_head,
+.main-second_table_fourth_head,
+.main-second_table_eighth_head,
+.main-fourth_table_fourth_head,
+.main-fourth_table_eighth_head{
+  width : 9%;
+  color : white;
+  display: flex;
+  font-size: 14px;
+}
+
+
+.main-top_table_ninth_head,
+.main-second_table_ninth_head,
+.main-fourth_table_ninth_head{
+  width : 13%;
+  color : white;
+  display: flex;
+  font-size: 14px;
+}
+
+.main-top_table_sixth_head,
+.main-top_table_seventh_head,
+.main-second_table_sixth_head,
+.main-second_table_seventh_head,
+.main-fourth_table_seventh_head{
+  width : 6%;
+  color : white;
+  display: flex;
+  font-size: 14px;
+}
+
+.main-fourth_table_sixth_head{
+  width : 6%;
+  color : white;
+  display: flex;
+  font-size: 12px;
+}
+
+.main-top_table_cancel_head,
+.main-second_table_cancel_head,
+.main-fourth_table_cancel_head{
+  width : 7%;
+  color : white;
+  display: flex;
+  font-size: 14px;
+}
+
+.main-top_table_second_body,
+.main-top_table_third_body,
+.main-top_table_fifth_body,
+.main-second_table_second_body,
+.main-second_table_third_body,
+.main-second_table_fifth_body,
+.main-fourth_table_second_body,
+.main-fourth_table_third_body,
+.main-fourth_table_fifth_body{
+  font-size: 12px;
+  width: 11%;
+  color: #666;
+  display: flex;
+  justify-content: center;
+}
+
+.main-top_table_first_body,
+.main-second_table_first_body,
+.main-fourth_table_first_body{
+  font-size: 12px;
+  width: 17%;
+  color: #666;
+  display: flex;
+  justify-content: center;
+}
+
+.main-top_table_fourth_body,
+.main-top_table_eighth_body,
+.main-second_table_fourth_body,
+.main-second_table_eighth_body,
+.main-fourth_table_fourth_body,
+.main-fourth_table_eighth_body{
+  font-size: 12px;
+  width: 9%;
+  color: #666;
+  display: flex;
+  justify-content: center;
+}
+
+.main-top_table_ninth_body,
+.main-second_table_ninth_body,
+.main-fourth_table_ninth_body {
+  font-size: 12px;
+  width: 13%;
+  color: #666;
+  display: flex;
+  justify-content: center;
+}
+
+
+.main-top_table_sixth_body,
+.main-top_table_seventh_body,
+.main-second_table_sixth_body,
+.main-second_table_seventh_body,
+.main-fourth_table_sixth_body,
+.main-fourth_table_seventh_body{
+  font-size: 12px;
+  width: 6%;
+  color: #666;
+  display: flex;
+  justify-content: center;
+}
+
+.main-top_table_cancel_body,
+.main-second_table_cancel_body,
+.main-fourth_table_cancel_body{
+  font-size: 12px;
+  width: 7%;
+  color: #666;
+  display: flex;
+  justify-content: center;
+}
+
+.main-third_table_first_head{
+  width : 17%;
+  color : white;
+  display: flex;
+  font-size: 14px;
+}
+
+.main-third_table_second_head,
+.main-third_table_third_head{
+  width : 14%;
+  color : white;
+  display: flex;
+  font-size: 14px;
+}
+
+.main-third_table_fifth_head{
+  width : 11%;
+  color : white;
+  display: flex;
+  font-size: 14px;
+}
+
+
+.main-third_table_fourth_head,
+.main-third_table_sixth_head,
+.main-third_table_seventh_head,
+.main-third_table_ninth_head,
+.main-third_table_cancel_head{
+  width : 8%;
+  color : white;
+  display: flex;
+  font-size: 14px;
+}
+
+.main-third_table_eighth_head{ 
+  width : 12%;
+  color : white;
+  display: flex;
+  font-size: 14px;
+}
+
+.main-third_table_first_body{
+  font-size: 12px;
+  width: 17%;
+  color: #666;
+  display: flex;
+  justify-content: center;
+}
+
+.main-third_table_second_body,
+.main-third_table_third_body{
+  font-size: 12px;
+  width: 14%;
+  color: #666;
+  display: flex;
+  justify-content: center;
+}
+
+.main-third_table_fifth_body{
+  font-size: 12px;
+  width: 11%;
+  color: #666;
+  display: flex;
+  justify-content: center;
+}
+
+.main-third_table_fourth_body,
+.main-third_table_sixth_body,
+.main-third_table_seventh_body,
+.main-third_table_ninth_body,
+.main-third_table_cancel_body{
+  font-size: 12px;
+  width: 8%;
+  color: #666;
+  display: flex;
+  justify-content: center;
+}
+
+.main-third_table_eighth_body{
+  font-size: 12px;
+  width: 12%;
+  color: #666;
+  display: flex;
+  justify-content: center;
+}
+
+.admit,
+.cancel {
+  height : 25px;
+}
+
+.main-fourth_table {
+  margin-bottom: 50px;
+}
+
+.input {
+  width : 100%;
+}

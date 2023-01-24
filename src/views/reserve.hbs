@@ -1,0 +1,240 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="reserve.css" />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <script>
+    const logout = () => {window.location.href="http://localhost:3000/logout"};
+    const move1 = () => {window.location.href="http://localhost:3000/reserve"};
+    const move2 = () => {window.location.href="http://localhost:3000/reserveinfo"};
+  </script>
+</head>
+<div class="header">
+  <div class="header-logo">
+    <div class="logo"><img
+        src="./img/car.png"
+        alt="Car Dealer"
+      /></div>
+    <span class="logo-text">Car Dealer</span>
+  </div>
+
+  <div class="header-info">
+    <span class="header-info_title">Car Dealer WEB에 방문해주셔서 감사합니다!</span>
+  </div>
+</div>
+
+<div class="content">
+  <div class="side">
+    <div class="side-frame">
+      <div class="side-frame_id">
+        <div class="userinfo">{{user}}님</div>
+        <button class="logout" onclick="logout()">Logout</button>
+      </div>
+    </div>
+    <div class="side-menu">
+      <div class="side-menu_list">
+        <span class="side-menu_list_colored">FOR 구매자</span>
+        <span class="material-symbols-outlined">expand_more</span>
+      </div>
+      <div class="side-menu_list" onclick="move1()">
+        <span>차량 구매 예약</span>
+      </div>
+      <div class="side-menu_list" onclick="move2()">
+        <span>차량 예약 내역 조회</span>
+      </div>
+      <div class="side-menu_list">
+        <span class="side-menu_list_colored">FOR 관리자</span>
+        <span class="material-symbols-outlined">expand_more</span>
+      </div>
+      <div class="side-menu_list">
+        <span>차량 등록</span>
+      </div>
+      <div class="side-menu_list">
+        <span>차량 정보 수정</span>
+      </div>
+      <div class="side-menu_list" >
+        <span>차량 정보 삭제</span>
+      </div>
+      <div class="side-menu_list">
+        <span>차량 예약 정보 수정</span>
+      </div>
+      <div class="side-menu_list">
+        <span>예약 차량 판매 여부</span>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="main-top">
+      <span class="main-top_title">차량 구매 예약</span>
+      <div><span class="material-symbols-outlined">directions_car</span> Sedan</div>
+      <div class="main-top_table">
+        <table>
+          <tr style="background-color: #de8041;">
+            <td class="main-top_table_first_head">차대 번호</td>
+            <td class="main-top_table_second_head">모델명</td>
+            <td class="main-top_table_third_head">제조사</td>
+            <td class="main-top_table_fourth_head">연비</td>
+            <td class="main-top_table_fifth_head">가격</td>
+            <td class="main-top_table_sixth_head">좌석 수</td>
+            <td class="main-top_table_seventh_head">문 수</td>
+            <td class="main-top_table_eighth_head">색상</td>
+            <td class="main-top_table_ninth_head">판매자</td>
+            <td class="main-top_table_admit_head">예약하기</td>
+          </tr>
+          {{#each sedan}}
+          <tr>
+            <td class="main-top_table_first_body">{{vin}}</td>
+            <td class="main-top_table_second_body">{{model}}</td>
+            <td class="main-top_table_third_body">{{manufacturer}}</td>
+            <td class="main-top_table_fourth_body">{{fuel_efficiency}}</td>
+            <td class="main-top_table_fifth_body">{{price}}</td>
+            <td class="main-top_table_sixth_body">{{seats_num}}</td>
+            <td class="main-top_table_seventh_body">{{doors_num}}</td>
+            <td class="main-top_table_eighth_body">{{color}}</td>
+            <td class="main-top_table_ninth_body">{{s_SSN}}</td>
+            <form method="post">
+              <td class="main-top_table_admit_body">
+                <button 
+                  class ="admit"
+                  name="admitBtn"  
+                  type="submit" 
+                  value="{{vin}}" 
+                  formaction="/reserve"
+                >
+                예약
+                </button>
+              </td>
+            </form>
+          </tr>
+          {{/each}}
+        </table>
+      </div>
+      <div><span class="material-symbols-outlined">directions_car</span> SUV</div>
+      <div class="main-second_table">
+        <table>
+          <tr style="background-color: #de8041;">
+            <td class="main-second_table_first_head">차대 번호</td>
+            <td class="main-second_table_second_head">모델명</td>
+            <td class="main-second_table_third_head">제조사</td>
+            <td class="main-second_table_fourth_head">연비</td>
+            <td class="main-second_table_fifth_head">가격</td>
+            <td class="main-second_table_sixth_head">좌석 수</td>
+            <td class="main-second_table_seventh_head">크기</td>
+            <td class="main-second_table_eighth_head">색상</td>
+            <td class="main-second_table_ninth_head">판매자</td>
+            <td class="main-second_table_admit_head">예약하기</td>
+          </tr>
+          {{#each suv}}
+            <td class="main-second_table_first_body">{{vin}}</td>
+            <td class="main-second_table_second_body">{{model}}</td>
+            <td class="main-second_table_third_body">{{manufacturer}}</td>
+            <td class="main-second_table_fourth_body">{{fuel_efficiency}}</td>
+            <td class="main-second_table_fifth_body">{{price}}</td>
+            <td class="main-second_table_sixth_body">{{seats_num}}</td>
+            <td class="main-second_table_seventh_body">{{size}}</td>
+            <td class="main-second_table_eighth_body">{{color}}</td>
+            <td class="main-second_table_ninth_body">{{s_SSN}}</td>
+            <form method="post">
+              <td class="main-second_table_admit_body">
+                <button 
+                  class ="admit"
+                  name="admitBtn"  
+                  type="submit" 
+                  value="{{vin}}" 
+                  formaction="/reserve"
+                >
+                예약
+                </button>
+              </td>
+            </form>
+          </tr>
+          {{/each}}
+        </table>
+      </div>
+      <div><span class="material-symbols-outlined">directions_car</span> Bus</div>
+      <div class="main-third_table">
+        <table>
+          <tr style="background-color: #de8041;">
+            <td class="main-third_table_first_head">차대 번호</td>
+            <td class="main-third_table_second_head">모델명</td>
+            <td class="main-third_table_third_head">제조사</td>
+            <td class="main-third_table_fourth_head">연비</td>
+            <td class="main-third_table_fifth_head">가격</td>
+            <td class="main-third_table_sixth_head">좌석 수</td>
+            <td class="main-third_table_seventh_head">층 수</td>
+            <td class="main-third_table_eighth_head">판매자</td>
+            <td class="main-third_table_admit_head">예약하기</td>
+          </tr>
+          {{#each bus}}
+            <td class="main-third_table_first_body">{{vin}}</td>
+            <td class="main-third_table_second_body">{{model}}</td>
+            <td class="main-third_table_third_body">{{manufacturer}}</td>
+            <td class="main-third_table_fourth_body">{{fuel_efficiency}}</td>
+            <td class="main-third_table_fifth_body">{{price}}</td>
+            <td class="main-third_table_sixth_body">{{seats_num}}</td>
+            <td class="main-third_table_seventh_body">{{floors_num}}</td>
+            <td class="main-third_table_eighth_body">{{s_SSN}}</td>
+            <form method="post">
+              <td class="main-third_table_admit_body">
+                <button 
+                  class ="admit"
+                  name="admitBtn"  
+                  type="submit" 
+                  value="{{vin}}" 
+                  formaction="/reserve"
+                >
+                예약
+                </button>
+              </td>
+            </form>
+          </tr>
+          {{/each}}
+        </table>
+      </div>
+      <div><span class="material-symbols-outlined">directions_car</span> Truck</div>
+      <div class="main-fourth_table">
+        <table>
+          <tr style="background-color: #de8041;">
+            <td class="main-fourth_table_first_head">차대 번호</td>
+            <td class="main-fourth_table_second_head">모델명</td>
+            <td class="main-fourth_table_third_head">제조사</td>
+            <td class="main-fourth_table_fourth_head">연비</td>
+            <td class="main-fourth_table_fifth_head">가격</td>
+            <td class="main-fourth_table_sixth_head">적재 용량</td>
+            <td class="main-fourth_table_seventh_head">바퀴 수</td>
+            <td class="main-fourth_table_eighth_head">높이</td>
+            <td class="main-fourth_table_ninth_head">판매자</td>
+            <td class="main-fourth_table_admit_head">예약하기</td>
+          </tr>
+          {{#each truck}}
+            <td class="main-fourth_table_first_body">{{vin}}</td>
+            <td class="main-fourth_table_second_body">{{model}}</td>
+            <td class="main-fourth_table_third_body">{{manufacturer}}</td>
+            <td class="main-fourth_table_fourth_body">{{fuel_efficiency}}</td>
+            <td class="main-fourth_table_fifth_body">{{price}}</td>
+            <td class="main-fourth_table_sixth_body">{{tonnage}}</td>
+            <td class="main-fourth_table_seventh_body">{{wheels_num}}</td>
+            <td class="main-fourth_table_eighth_body">{{height}}</td>
+            <td class="main-fourth_table_ninth_body">{{s_SSN}}</td>
+            <form method="post">
+              <td class="main-fourth_table_admit_body">
+                <button 
+                  class ="admit"
+                  name="admitBtn"  
+                  type="submit" 
+                  value="{{vin}}" 
+                  formaction="/reserve"
+                >
+                예약
+                </button>
+              </td>
+            </form>
+          </tr>
+          {{/each}}
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
